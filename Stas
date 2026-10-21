@@ -20,4 +20,4 @@ def handle_message(message):
     except Exception as e:
         bot.reply_to(message, "Произошла ошибка! Проверь правильность ввода.")
 
-bot.infinite_polling()
+bot.infinity_polling()
