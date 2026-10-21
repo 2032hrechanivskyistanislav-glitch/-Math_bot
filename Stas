@@ -17,17 +17,17 @@ def handle_message(message):
         
         while True :
     print("Введи первую дробь:")
-    tekst=input()
-    drob=tekst.split("/")
-    verh = int(drob[0])
-    niz = int(drob[1])
+    kusochki[0]=input()
+    drob = kusochki[0].split("/")
+    drob: verh = int(drob[0])
+    niz = int(drob[1]))
     print("Введи вторую дробь:")
-    tekst2=input()
-    drob2=tekst2.split("/")
+    kusochki[2]=input()
+    drob2 = kusochki[2].split("/")
     verh2 = int(drob2[0])
     niz2 = int(drob2[1])
     print("Введи действие (+, -, *, :):")
-    znak = input()
+    znak = kusochki[1]
     if znak == "+":
         final_verh = (verh * niz2) + (verh2 * niz)
         final_niz = niz * niz2
