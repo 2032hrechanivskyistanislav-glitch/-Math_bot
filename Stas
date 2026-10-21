@@ -20,7 +20,7 @@ def handle_message(message):
     kusochki[0]=input()
     drob = kusochki[0].split("/")
     drob: verh = int(drob[0])
-    niz = int(drob[1]))
+    niz = int(drob[1])
     print("Введи вторую дробь:")
     kusochki[2]=input()
     drob2 = kusochki[2].split("/")
