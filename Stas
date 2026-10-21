@@ -8,12 +8,12 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
-    try:
+    try:   
         primer = message.text
       
         kusochki = primer.split()
+        drob = kusochki[0].split("/")
         
-        # drob1 будет kusochki[0], znak будет kusochki[1], drob2 будет kusochki[2]
         
     print("Введи первую дробь:")
     kusochki[0]=input()
