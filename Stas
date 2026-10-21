@@ -15,7 +15,6 @@ def handle_message(message):
         
         # drob1 будет kusochki[0], znak будет kusochki[1], drob2 будет kusochki[2]
         
-        while True :
     print("Введи первую дробь:")
     kusochki[0]=input()
     drob = kusochki[0].split("/")
