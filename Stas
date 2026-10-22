@@ -36,15 +36,6 @@ def handle_message(message):
             final_verh = verh * niz2
             final_niz = niz * verh2
         bot.reply_to(message,"Ответ:" + str(final_verh) + "/" + str(final_niz))
-    bot.reply_to(message,"На какое число нужно сократить")
-    sokratitel=int(input())
-    if final_verh % sokratitel == 0 and final_niz % sokratitel == 0:
-        sokr_verh = final_verh // sokratitel
-        sokr_niz = final_niz // sokratitel 
-         bot.reply_to(message, "Ответ: ", str(sokr_verh) + "/" + str(sokr_niz))
-    else:
-        print("На это число сократить нельзя!")
-
         
     except Exception as e:
         bot.reply_to(message, "Произошла ошибка! Проверь правильность ввода.")
