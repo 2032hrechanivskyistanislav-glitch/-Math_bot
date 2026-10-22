@@ -15,27 +15,26 @@ def handle_message(message):
         drob = kusochki[0].split("/")
         
         
-    bot.reply_to(message,"Введи дробь:")
-    drob = kusochki[0]
-    drob2 = kusochki[2].split("/")
-    verh2 = int(drob2[0])
-    niz2 = int(drob2[1])
-    znak = kusochki[1]
-    if znak == "+":
-        final_verh = (verh * niz2) + (verh2 * niz)
-        final_niz = niz * niz2
+        drob = kusochki[0]
+        drob2 = kusochki[2].split("/")
+        verh2 = int(drob2[0])
+        niz2 = int(drob2[1])
+        znak = kusochki[1]
+        if znak == "+":
+            final_verh = (verh * niz2) + (verh2 * niz)
+            final_niz = niz * niz2
 
-    elif znak == "-":
-        final_verh = (verh * niz2) - (verh2 * niz)
-        final_niz = niz * niz2
+        elif znak == "-":
+            final_verh = (verh * niz2) - (verh2 * niz)
+            final_niz = niz * niz2
 
-    elif znak == "*":
-        final_verh = verh * verh2
-        final_niz = niz * niz2
+        elif znak == "*":
+            final_verh = verh * verh2
+            final_niz = niz * niz2
 
-    elif znak == ":":
-        final_verh = verh * niz2
-        final_niz = niz * verh2
+        elif znak == ":":
+            final_verh = verh * niz2
+            final_niz = niz * verh2
     bot.reply_to(message,"Ответ:", str(final_verh) + "/" + str(final_niz))
     bot.reply_to(message,"На какое число нужно сократить")
     sokratitel=int(input())
