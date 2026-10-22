@@ -8,18 +8,19 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
-    try:   
+       try:   
         primer = message.text
-      
         kusochki = primer.split()
-        drob = kusochki[0].split("/")
         
+        drob = kusochki.split("/")
+        verh = int(drob)  
+        niz = int(drob)   
         
-        drob = kusochki[0]
-        drob2 = kusochki[2].split("/")
-        verh2 = int(drob2[0])
-        niz2 = int(drob2[1])
-        znak = kusochki[1]
+        drob2 = kusochki.split("/")
+        verh2 = int(drob2)
+        niz2 = int(drob2)
+        znak = kusochki
+
         if znak == "+":
             final_verh = (verh * niz2) + (verh2 * niz)
             final_niz = niz * niz2
