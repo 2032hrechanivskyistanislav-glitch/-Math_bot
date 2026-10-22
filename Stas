@@ -15,43 +15,34 @@ def handle_message(message):
         drob = kusochki[0].split("/")
         
         
-    print("Введи первую дробь:")
-    kusochki[0]=input()
-    drob = kusochki[0].split("/")
-    drob: verh = int(drob[0])
-    niz = int(drob[1])
-    print("Введи вторую дробь:")
-    kusochki[2]=input()
+    bot.reply_to(message("Введи дробь:")
+    drob = kusochki[0]
     drob2 = kusochki[2].split("/")
     verh2 = int(drob2[0])
     niz2 = int(drob2[1])
-    print("Введи действие (+, -, *, :):")
     znak = kusochki[1]
     if znak == "+":
         final_verh = (verh * niz2) + (verh2 * niz)
         final_niz = niz * niz2
-        print("Ответ:", str(final_verh) + "/" + str(final_niz))
 
     elif znak == "-":
         final_verh = (verh * niz2) - (verh2 * niz)
         final_niz = niz * niz2
-        print("Ответ:", str(final_verh) + "/" + str(final_niz))
 
     elif znak == "*":
         final_verh = verh * verh2
         final_niz = niz * niz2
-        print("Ответ:", str(final_verh) + "/" + str(final_niz))
 
     elif znak == ":":
         final_verh = verh * niz2
         final_niz = niz * verh2
-        print("Ответ:", str(final_verh) + "/" + str(final_niz))
-    print("На какое число нужно сократить")
+    bot.reply_to(message,"Ответ:", str(final_verh) + "/" + str(final_niz))
+    bot.reply_to(message,"На какое число нужно сократить")
     sokratitel=int(input())
     if final_verh % sokratitel == 0 and final_niz % sokratitel == 0:
         sokr_verh = final_verh // sokratitel
         sokr_niz = final_niz // sokratitel 
-        print("Ответ:", str(sokr_verh) + "/" + str(sokr_niz))
+         bot.reply_to(message, "Ответ: ", str(sokr_verh) + "/" + str(sokr_niz))
     else:
         print("На это число сократить нельзя!")
 
