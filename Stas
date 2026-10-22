@@ -15,7 +15,7 @@ def handle_message(message):
         drob = kusochki[0].split("/")
         
         
-    bot.reply_to(message("Введи дробь:")
+    bot.reply_to(message,"Введи дробь:")
     drob = kusochki[0]
     drob2 = kusochki[2].split("/")
     verh2 = int(drob2[0])
